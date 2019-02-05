@@ -1,0 +1,52 @@
+button {
+
+    &.button-primary {
+        border: none;
+        background: $color-primary;
+        color: #fff;
+        padding: .8rem 1.5rem;
+        border-radius: .3rem;
+    }
+
+    &.button-simple {
+        border: none;
+        background: transparent;
+        color: $color-primary;
+        padding: .5rem;
+
+
+    }
+
+    &.style-1 {
+        position: relative;
+        font-weight: bold;
+        color: $body-font-color;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -1rem;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: .2rem;
+            background: $color-primary;
+            opacity: 0;
+            transition: .3s;
+        }
+        
+        &:hover,        
+        &:hover::after {
+            color: $color-primary;
+            opacity: 1;
+        }
+    }
+
+
+
+    &:hover {
+        transform: translateY(-.2rem);
+    }
+
+
+}

@@ -1,0 +1,31 @@
+.claient {
+    background: $bg-color-1;
+    padding-bottom: 5rem;
+    
+    &__box {
+        
+        .single--item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: grayscale(95%);
+            transition: .5s;
+            height: 12rem;
+            padding: 1.5rem;
+            @include respond(phone) {
+                height: 15rem;
+            }
+    
+            &:hover {
+                filter: grayscale(0);
+            }
+    
+            .img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+    }
+
+}

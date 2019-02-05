@@ -1,0 +1,52 @@
+body {
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $body-font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $heading-font;
+    color: $heading-font-color;
+}
+
+a,
+button {
+    transition: .3s;
+    font-weight: 400;
+}
+
+button {
+    font-size: 1.5rem;
+}
+
+.heading-primary {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.heading-quaternary {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+

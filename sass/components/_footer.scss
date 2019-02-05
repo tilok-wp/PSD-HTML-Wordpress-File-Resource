@@ -1,0 +1,112 @@
+.footer {
+    background: rgba($color-black, .8);
+
+    &__top {
+
+        .footer--box {
+            margin-bottom: 3rem;
+
+
+        }
+
+        .footer--logo {
+            margin-bottom: 3rem;
+
+            img {
+             height: 5rem;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $p-color-2;
+        }
+
+        .social-icon {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 3rem;
+
+            li {
+                margin-right: 1rem;
+                
+                a {
+                    padding: 1rem 1.2rem;
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                    border-radius: .4rem;
+                    border: .1rem solid rgba($color-white, .2);
+                    color: $p-color-2;
+                    text-decoration: none;
+                }
+
+                &:hover a {
+                    background: $color-primary;
+                    border-color: transparent;
+                }
+            }
+        }
+
+        h3 {
+            color: $color-white;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .footer-link {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                color: $p-color-2;
+                margin-bottom: .5rem;
+                display: flex;
+                align-items: flex-start;         
+
+                a {
+                    color: $p-color-2;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+
+                span {
+                    margin-right: 1.5rem;
+                    font-size: 2rem;
+                    color: $color-primary;
+                }
+            }
+
+        }
+
+        .tag-link {
+
+            li {
+                display: inline-block;
+                border: .1rem solid rgba($color-white, .2);
+                padding: 1rem 2rem;
+                margin-bottom: 1rem;
+                border-radius: .4rem;           
+            }
+        }
+    }
+
+    &__buttom {
+        padding: 2rem;
+        background: rgba($color-white, .05);
+        small {
+            color: #ccc;
+            b {
+                color: #fff;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,59 @@
+.about {
+
+    &__details {
+        min-height: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+       &-title {
+            margin-bottom: 3rem;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: -1.5rem;
+                left: 0;
+                width: 6rem;
+                height: .2rem;
+                background: $color-primary;
+            }
+        }
+
+        .p-text-1 {
+            margin-bottom: 3rem;
+        }
+
+        .progress {
+            height: .8rem;
+            overflow: inherit;
+            
+            &-bar {
+                position: relative;  
+                text-align: right;
+                border-radius: .4rem;
+                background-color: $color-primary;
+
+                .progress-status {
+                    position: absolute;
+                    top: -3rem;
+                    color: $body-font-color;
+                    right: 1rem;
+                }
+            }
+        }
+    }
+
+    &__image {
+        background-image: url(../images/about-1.jpg);
+        min-height: 40rem;
+        background-position: center;
+        background-size: cover;
+        padding: 1rem;
+        border-radius: .5rem;
+        @include respond(tab) {
+            margin-top: 3rem;
+        }       
+    }
+}

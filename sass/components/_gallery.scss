@@ -1,0 +1,53 @@
+.gallery {
+
+    &__box {
+        margin-bottom: 2.5rem;
+
+        &-content {
+            position: relative;
+            border-radius: .5rem;
+            overflow: hidden;
+
+            .gallery--image {
+                width: 100%;
+            }
+
+            .box-text {
+                position: absolute;
+                content: "";
+                background: rgba($color-primary, .6);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: $color-white;
+                opacity: 0;
+                transition: .5s;
+
+                a {
+                    text-decoration: none;
+                    h3 {
+                        color: $color-white;
+                        margin: 1rem 0;
+                    }
+                }
+
+                i {
+                    padding: 1rem;
+                    border: .1rem solid $color-white;
+                    border-radius: .3rem;
+                }
+
+            }
+
+            &:hover .box-text {
+                opacity: 1;
+                transition: .5s;
+            }
+        }
+    }
+}

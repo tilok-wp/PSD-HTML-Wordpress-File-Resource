@@ -1,0 +1,131 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color-white , 1 );
+    z-index: 99;
+
+    &__top {
+        background: $bg-color-1;
+        font-size: 1.2rem;
+
+        @include respond(phone) {
+            display: none;
+        }
+              
+        .top--massage {
+            padding: 1rem 0;
+        }
+
+        .social-link {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 1rem 0;
+
+            li {
+                
+                &:not(:last-child) {
+                    margin-right: .5rem;
+                }
+                
+                &:first-child {
+                    margin-right: 1rem;
+                }
+
+                a {
+                    padding: .3rem .5rem;
+                    color: $body-font-color;
+                    text-decoration: none;
+                    background: $bg-color-2;
+                    border-radius: .5rem;
+
+                    &:hover {
+                        background: $color-primary;
+                        color: $color-white;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    &__menu {
+        // background: rgba($color-black, .5);
+        .navbar {
+            margin-bottom: 0;
+
+            &-brand {
+                padding: 0;
+                height: 8rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @include respond(large-phone) {
+                    margin-left: 1.5rem;
+                    height: 4rem;
+                }
+
+                .logo--image {
+                    height: 4rem;
+                    @include respond(large-phone) {
+                        height: 3.5rem;
+                    }
+                }
+            }
+
+            &-toggle {
+
+                .icon-bar {
+                    background: $color-primary;
+                }
+            }
+        }
+
+        .nav {
+            padding: 2rem 0;
+
+            .open {
+                background: transparent;
+
+                .dropdown-menu {
+                    background: rgba($color-white , .8 );
+                }
+            }
+
+
+            .open>a {
+                background: transparent;
+            }
+
+            li {
+
+                &.active {
+                    background: transparent;
+                }
+
+                a {
+                    color: $heading-font-color;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    padding: 1rem;
+
+                    &:focus {
+                        background: transparent;
+                        box-shadow: none;
+                        outline: none;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "psd2html",
+  "version": "1.0.0",
+  "description": "Project For AUservice by Tilok",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss assets/css/main.css -w"
+  },
+  "author": "Tilok Paul",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}

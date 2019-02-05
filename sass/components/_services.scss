@@ -1,0 +1,90 @@
+.service {
+
+
+    &__box {
+        margin-bottom: 1rem;
+        text-align: center;
+
+        &-item {
+            padding: 1rem 0;
+            .item-icon {              
+                display: inline-block;
+                margin-bottom: 3rem;
+    
+                i {
+                    width: 8rem;
+                    height: 8rem;
+                    line-height: 8rem;
+                    border-radius: 50%;
+                    background: $color-primary;
+                    color: $color-white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .item-title {
+                margin-bottom: 1.5rem;
+            }
+
+            .item-text {
+                padding: 0 .5rem;
+            }
+
+        }
+        
+        .owl-nav {
+            
+            .owl-prev {
+                position: absolute;
+                top: 50%;
+                left: -2rem;
+                transform: translateY(-50%);
+                
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                i {
+                    padding: .8rem .8rem .8rem .5rem;
+                    border-radius: .3rem;
+                    background: rgba($color-black, .1);
+                    transition: .3s;
+    
+                    &:hover {
+                        background: $color-primary;
+                        color: $color-white;
+                    }
+                }
+            }
+
+            .owl-next {
+                position: absolute;
+                top: 50%;
+                right: -2rem;
+                transform: translateY(-50%);
+                
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                i {
+                    padding: .8rem .5rem .8rem .8rem;
+                    border-radius: .3rem;
+                    background: rgba($color-black, .1);
+                    transition: .3s;
+    
+                    &:hover {
+                        background: $color-primary;
+                        color: $color-white;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

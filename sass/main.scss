@@ -1,0 +1,26 @@
+
+@import "abstracts/functions";
+@import "abstracts/mixing";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/preloder";
+@import "components/button";
+@import "components/section-heading";
+@import "components/header";
+@import "components/hero";
+@import "components/about";
+@import "components/services";
+@import "components/gallery";
+@import "components/counterup";
+@import "components/testimonial";
+@import "components/claient";
+@import "components/footer";
+
+@import "layout/header";
+
+@import "page/home";
