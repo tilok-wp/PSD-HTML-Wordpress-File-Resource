@@ -1,112 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php get_header(); ?>
 
-    <!-- Site-title-tag -->
-    <title>AU Service | PSD to HTML</title>
-
-    <!-- Google-fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,700,900" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Roboto:900" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font-awesome -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/icofont.min.css" rel="stylesheet">
-    <!-- Owl-carousel -->
-    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
-    <!-- Magnific-popup -->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- Main-css -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <!-- Start Header Area -->
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6">
-              <div class="top--massage">Best services quality for customers.</div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6">
-              <ul class="social-link">
-                <li class="link-title">Follow Us: </li>
-                <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                <li><a href="#"><i class="icofont-behance"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__menu">
-        <nav class="navbar">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">     
-                <img src="assets/images/logo-1.png" alt="Au Service Logo" class="logo--image">
-                <!-- <h1 class="logo--text"></h1> -->
-              </a>
-            </div>
-        
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                  <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Features <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Feature 1</a></li>
-                    <li><a href="#">Feature 2</a></li>
-                    <li><a href="#">Feature 3</a></li>
-                  </ul>
-                </li>
-                  <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                  </ul>
-                </li>
-                  <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Blog 1</a></li>
-                    <li><a href="#">Blog 2</a></li>
-                    <li><a href="#">Blog 3</a></li>
-                  </ul>
-                </li>
-                <li class=""><a href="#">Contact</a></li>
-                <li><a href="#"><i class="icofont-ui-search"></i></a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-      </div>
-    </header>
-    <!-- End Header Area -->
     <!-- Start hero Section -->
     <div class="hero hero-image">
       <div class="hero__text">
@@ -230,7 +123,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -243,7 +136,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -256,7 +149,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -269,7 +162,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -282,7 +175,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -295,7 +188,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -308,7 +201,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -321,7 +214,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="gallery__box">
               <div class="gallery__box-content">
-                <img src="assets/images/one.jpg" alt="Image 1" class="gallery--image">
+                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
                 <div class="box-text">
                   <a href="#">
                     <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
@@ -429,27 +322,27 @@
         <div class="claient__box owl-carousel">
           <div class="single--item">
             <a href="#">
-              <img src="assets/images/client-1.png" alt="">
+              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-1.png" alt="">
             </a>
           </div>
           <div class="single--item">
             <a href="#">
-              <img src="assets/images/client-2.png" alt="">
+              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-2.png" alt="">
             </a>
           </div>
           <div class="single--item">
             <a href="#">
-              <img src="assets/images/client-3.png" alt="">
+              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-3.png" alt="">
             </a>
           </div>
           <div class="single--item">
             <a href="#">
-              <img src="assets/images/client-4.png" alt="">
+              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-4.png" alt="">
             </a>
           </div>
           <div class="single--item">
             <a href="#">
-              <img src="assets/images/client-5.png" alt="">
+              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-5.png" alt="">
             </a>
           </div>
         </div>
@@ -463,7 +356,7 @@
             <div class="col-md-3 col-sm-6">
               <div class="footer--box">
                 <div class="footer--logo">
-                  <img src="assets/images/logo-2.png" alt="Footer logo">
+                  <img src="<?php echo get_template_directory_uri (); ?>/assets/images/logo-2.png" alt="Footer logo">
                 </div>
                 <p class="text-1">Pellentesque sit amet interdum tortor purus, quis blandit purus placerat ac. Integer ac scelerisque odio molestie tellus. Duis consequat laoreet diam, efficitur amet iaculis turpis.</p>
                 <ul class="social-icon">
@@ -521,31 +414,15 @@
       </div>
     </footer>
     <!-- Start preloader-area -->
-     <div class="preloader-area">
-      <div class='preloader'>
-        <div class="lds-ellipsis">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <div class="preloader-area">
+        <div class='preloader'>
+          <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
-    </div>
     <!-- End preloader-area -->
-
-    <!-- jQuery-1.12.4 -->
-    <script src="assets/js/jquery-1.12.4.js"></script>
-    <!-- Bootstrap-js -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Owl-carousel-js -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Magnific-popup-js -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counterup-js -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- waypoints-js -->
-    <script src="assets/js/jquery.waypoints.js"></script>
-    <!-- Custom-scripts-js -->
-    <script src="assets/js/scripts.js"></script>
-  </body>
-</html>
+<?php get_footer(); ?>
