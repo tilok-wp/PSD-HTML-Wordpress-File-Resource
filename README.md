@@ -1,10 +1,8 @@
-# PSD to HTML CONVERT RESOURCE
+# HTML to  Wordpress CONVERT RESOURCE
 
-This repo contains starter files and the finished project files for all the projects contained in the course.
+This repo contains starter files and the finished project files for all the projects contained for the future use.
 
-Plus, I made all the course slides available for download, to make it easier to follow along the conceptual videos.
-
-?? ***Please read the following Frequently Asked Questions (FAQ) carefully before starting the course*** ??
+?? ***Please read the following Frequently Asked Questions (FAQ) carefully*** ??
 
 ## FAQ
 

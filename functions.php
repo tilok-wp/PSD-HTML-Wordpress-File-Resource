@@ -33,6 +33,7 @@ function auseervice_theme_scripts(){
 }
 add_action('wp_enqueue_scripts','auseervice_theme_scripts');
 
+// Menu function
     function autheme_falback_menu (){ ?>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
