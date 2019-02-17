@@ -68,46 +68,40 @@
         </div>
         <div class="service__box">
           <div class="service--carousel owl-carousel">
-            <div class="service__box-item">
-                <div class="item-icon">
-                  <i class="icofont-automation icofont-2x"></i>
-                </div>
-                <div class="item-title">
-                  <h3 class="heading-tertiary">Clean Servicee</h3>
-                </div>
-                <p class="item-text">Nullam dapibus massa augue, vel lacus dapibus placerat sit egestas felis.</p>
-                <button class="button-simple style-1">Read More</button>
-            </div>
-            <div class="service__box-item">
-                <div class="item-icon">
-                  <i class="icofont-binary icofont-2x"></i>
-                </div>
-                <div class="item-title">
-                  <h3 class="heading-tertiary">Repair Parts</h3>
-                </div>
-                <p class="item-text">Integer nec pellentesque augue. Vestibulum arcu est, pretium at sapien ut, rutrum</p>
-                <button class="button-simple style-1">Read More</button>
-            </div>
-            <div class="service__box-item">
-                <div class="item-icon">
-                  <i class="icofont-bag-alt icofont-2x"></i>
-                </div>
-                <div class="item-title">
-                  <h3 class="heading-tertiary">Engine Repair</h3>
-                </div>
-                <p class="item-text">Morbi ullamcorper lacus libero, ac facilisis nibh molestie viverra massa the augue.</p>
-                <button class="button-simple style-1">Read More</button>
-            </div>
-            <div class="service__box-item">
-                <div class="item-icon">
-                  <i class="icofont-bag-alt icofont-2x"></i>
-                </div>
-                <div class="item-title">
-                  <h3 class="heading-tertiary">Engine Repair</h3>
-                </div>
-                <p class="item-text">Morbi ullamcorper lacus libero, ac facilisis nibh molestie viverra massa the augue.</p>
-                <button class="button-simple style-1">Read More</button>
-            </div>
+          <?php 
+                $auservice_post = null;
+                $auservice_post = new WP_Query(array(
+                    'post_type' => 'services',
+                    'posts_per_page'=> -1,
+                ));
+
+                if( $auservice_post->have_posts() ){
+                    while( $auservice_post -> have_posts() ){
+                        $auservice_post -> the_post(); 
+                        $item_text = get_post_meta( get_the_ID(), 'item_text', true );
+                        $item_icon = get_post_meta( get_the_ID(), 'item_icon', true );
+                        $button_text = get_post_meta( get_the_ID(), 'button_text', true );                        
+                        ?>
+                        <!-- Begin Single service item -->
+                        <div class="service__box-item">
+                          <div class="item-icon">
+                            <i class="<?php echo $item_icon; ?>"></i>
+                          </div>
+                          <div class="item-title">
+                            <h3 class="heading-tertiary"><?php the_title(); ?></h3>
+                          </div>
+                          <p class="item-text"><?php echo $item_text; ?></p>
+                          <button class="button-simple style-1"><?php echo $button_text; ?></button>
+                        </div>
+                        <!-- End Single service item -->
+                           
+                    <?php }
+
+                    }else{
+                        echo 'No post';
+                    }
+                    wp_reset_postdata();
+                ?>
           </div>
         </div>
       </div>
@@ -120,110 +114,38 @@
           <div class="service__heading section-heading text-center">
             <h2 class="heading-secondary">Gallery</h2>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="gallery__box">
-              <div class="gallery__box-content">
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/one.jpg" alt="Image 1" class="gallery--image">
-                <div class="box-text">
-                  <a href="#">
-                    <h3 class="heading-quaternary">Duis Quis Imperdiet.</h3>
-                  </a> 
-                  <i class="icofont-eye"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php 
+                $auservice_post = null;
+                $auservice_post = new WP_Query(array(
+                    'post_type' => 'galerrys',
+                    'posts_per_page'=> -1,                    
+                    'order' => 'ASC'
+                ));
+
+                if( $auservice_post->have_posts() ){
+                    while( $auservice_post -> have_posts() ){
+                        $auservice_post -> the_post();                         
+                        ?>
+                        <div class="col-md-3 col-sm-6">
+                          <div class="gallery__box">
+                            <div class="gallery__box-content">
+                              <img src="<?php the_post_thumbnail_url('post-thum'); ?>" alt="Image 1" class="gallery--image">
+                              <div class="box-text">
+                                <a href="<?php the_permalink(); ?>">
+                                  <h3 class="heading-quaternary"><?php the_title(); ?></h3>
+                                </a> 
+                                <i class="icofont-eye"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                         
+                    <?php }
+
+                    }else{
+                        echo 'No post Found';
+                    }
+                    wp_reset_postdata();
+                ?>
         </div>
       </div>
     </section>
@@ -267,48 +189,38 @@
           <h2 class="heading-secondary">What Our Client Say?</h2>
         </div>
         <div class="testimonial__box owl-carousel">
-          <div class="testimonial-single">
-            <p class="text-1"><i class="fa fa-quote-left"></i>  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posue ltesque habitant morbi tristique senectus et netus et malesuada fam t egestas. Nulla daps massa augue, vel suscipit dapibus placerat. Etiam dmalesuada sit ame in, laoreet maximus.</p>
-            <div class="author-detail">
-              <div class="author--image author--image-1"></div>
-              <h3 class="author-name heading-tertiary">Mickle Smith <span class="author-position">UI Designer in Envato</span></h3>
-            </div>
-          </div>
-          <div class="testimonial-single">
-            <p class="text-1"><i class="fa fa-quote-left"></i>  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posue ltesque habitant morbi tristique senectus et netus et malesuada fam t egestas. Nulla daps massa augue, vel suscipit dapibus placerat. Etiam dmalesuada sit ame in, laoreet maximus.</p>
-            <div class="author-detail">
-              <div class="author--image author--image-2"></div>
-              <h3 class="author-name heading-tertiary">Mickle Smith <span class="author-position">UI Designer in Envato</span></h3>
-            </div>
-          </div>
-          <div class="testimonial-single">
-            <p class="text-1"><i class="fa fa-quote-left"></i>  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posue ltesque habitant morbi tristique senectus et netus et malesuada fam t egestas. Nulla daps massa augue, vel suscipit dapibus placerat. Etiam dmalesuada sit ame in, laoreet maximus.</p>
-            <div class="author-detail">
-              <div class="author--image author--image-3"></div>
-              <h3 class="author-name heading-tertiary">Mickle Smith <span class="author-position">UI Designer in Envato</span></h3>
-            </div>
-          </div>
-          <div class="testimonial-single">
-            <p class="text-1"><i class="fa fa-quote-left"></i>  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posue ltesque habitant morbi tristique senectus et netus et malesuada fam t egestas. Nulla daps massa augue, vel suscipit dapibus placerat. Etiam dmalesuada sit ame in, laoreet maximus.</p>
-            <div class="author-detail">
-              <div class="author--image author--image-1"></div>
-              <h3 class="author-name heading-tertiary">Mickle Smith <span class="author-position">UI Designer in Envato</span></h3>
-            </div>
-          </div>
-          <div class="testimonial-single">
-            <p class="text-1"><i class="fa fa-quote-left"></i>  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posue ltesque habitant morbi tristique senectus et netus et malesuada fam t egestas. Nulla daps massa augue, vel suscipit dapibus placerat. Etiam dmalesuada sit ame in, laoreet maximus.</p>
-            <div class="author-detail">
-              <div class="author--image author--image-2"></div>
-              <h3 class="author-name heading-tertiary">Mickle Smith <span class="author-position">UI Designer in Envato</span></h3>
-            </div>
-          </div>
-          <div class="testimonial-single">
-              <p class="text-1"><i class="fa fa-quote-left"></i>  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posue ltesque habitant morbi tristique senectus et netus et malesuada fam t egestas. Nulla daps massa augue, vel suscipit dapibus placerat. Etiam dmalesuada sit ame in, laoreet maximus.</p>
-              <div class="author-detail">
-                <div class="author--image author--image-1"></div>
-                <h3 class="author-name heading-tertiary">Mickle Smith <span class="author-position">UI Designer in Envato</span></h3>
-              </div>
-          </div>
+        <?php 
+                $auservice_post = null;
+                $auservice_post = new WP_Query(array(
+                    'post_type' => 'testimonial',
+                    'posts_per_page'=> -1,
+                    'order'   => 'ASC'
+                ));
+
+                if( $auservice_post->have_posts() ){
+                    while( $auservice_post -> have_posts() ){
+                        $auservice_post -> the_post(); 
+                        $author_post = get_post_meta( get_the_ID(), 'author_post', true );                       
+                        $testimonial_text = get_post_meta( get_the_ID(), 'testimonial_text', true );                       
+                        ?>
+                        <!-- Begin Single Testimonial item -->
+                        <div class="testimonial-single">
+                          <p class="text-1"><i class="fa fa-quote-left"></i><?php echo $testimonial_text; ?></p>
+                          <div class="author-detail">
+                          <div class="author--image" style = "background-image: url('<?php the_post_thumbnail_url(); ?>')" ></div>
+                          <h3 class="author-name heading-tertiary"><?php the_title(); ?><span class="author-position"><?php echo $author_post; ?> </span></h3>
+                          </div>
+                        </div>                        
+                        <!-- End Single Testimonial item -->
+                           
+                    <?php }
+
+                    }else{
+                        echo 'No post';
+                    }
+                    wp_reset_postdata();
+                ?>
+
         </div>
       </div>
     </section>
@@ -320,31 +232,30 @@
           <h2 class="heading-secondary">Our Partner </h2>
         </div>
         <div class="claient__box owl-carousel">
-          <div class="single--item">
-            <a href="#">
-              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-1.png" alt="">
-            </a>
-          </div>
-          <div class="single--item">
-            <a href="#">
-              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-2.png" alt="">
-            </a>
-          </div>
-          <div class="single--item">
-            <a href="#">
-              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-3.png" alt="">
-            </a>
-          </div>
-          <div class="single--item">
-            <a href="#">
-              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-4.png" alt="">
-            </a>
-          </div>
-          <div class="single--item">
-            <a href="#">
-              <img src="<?php echo get_template_directory_uri (); ?>/assets/images/client-5.png" alt="">
-            </a>
-          </div>
+        <?php 
+                $auservice_post = null;
+                $auservice_post = new WP_Query(array(
+                    'post_type' => 'claient-logo',
+                    'posts_per_page'=> -1,                    
+                    'order' => 'ASC'
+                ));
+
+                if( $auservice_post->have_posts() ){
+                    while( $auservice_post -> have_posts() ){
+                        $auservice_post -> the_post();                         
+                        ?>
+                        <div class="single--item">
+                          <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('client-thum'); ?>
+                          </a>
+                        </div>                        
+                    <?php }
+
+                    }else{
+                        echo 'No post Found';
+                    }
+                    wp_reset_postdata();
+                ?>
         </div>
       </div>
     </section>
