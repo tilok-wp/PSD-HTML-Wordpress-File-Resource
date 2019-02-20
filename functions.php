@@ -7,11 +7,23 @@ function auseervice_theme_init(){
     add_image_size('client-thum',175, 50, true);
 
     register_nav_menus(array(
-		'primary_menu' => 'Primary Menu'
+		'primary_menu' => 'Primary Menu',
+		'footer_menu' => 'Footer Menu',
     ));
 
 }
 add_action('after_setup_theme','auseervice_theme_init');
+
+function auseervice_theme_widgets(){
+    register_sidebar(array(
+        'id'          => 'footer-menu',
+        'name'        => ( 'Footer Menu Widgets'),
+        'description' => ( 'This sidebar is located above the age calander.'),
+        
+    ));
+
+}
+add_action('widgets_init', 'auseervice_theme_widgets');
 
 function auseervice_theme_scripts(){
     //All css 
@@ -80,7 +92,7 @@ add_action('wp_enqueue_scripts','auseervice_theme_scripts');
             ),
             'public' => true,
             'supports'=>array(
-                'title','revisions','custom-fields','page-attributes'
+                'title','revisions','page-attributes'
             )
         ));
 
@@ -129,3 +141,6 @@ add_action('wp_enqueue_scripts','auseervice_theme_scripts');
     }
     add_action('init','auservice_custom_post');
 
+    include_once('inc/cmb2_custome_fields.php');
+    require_once('inc/redux-framework-master/redux-framework.php');
+    require_once('inc/redux_auservice_config.php');

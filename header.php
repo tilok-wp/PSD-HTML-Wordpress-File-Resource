@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="<?php echo site_url(); ?> ">     
-                <img src="<?php echo get_template_directory_uri (); ?>/assets/images/logo-1.png" alt="Au Service Logo" class="logo--image">
+                <img src="<?php global $au_service; echo $au_service['site_logo']['url'] ?>" alt="Au Service Logo" class="logo--image">
                 <!-- <h1 class="logo--text"></h1> -->
               </a>
             </div>

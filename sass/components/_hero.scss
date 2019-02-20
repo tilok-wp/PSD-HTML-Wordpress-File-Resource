@@ -2,7 +2,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-
+    background-position: center;
+    background-size: cover;
+    
     &__text {
         flex: 1;
         display: flex;
@@ -70,9 +72,6 @@
 
     &.hero-image {
         background-image: url(../images/hero-3.jpg);
-        background-position: center;
-        background-size: cover;
-
     }
 }
 
