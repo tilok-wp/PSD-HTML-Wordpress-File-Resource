@@ -12,3 +12,8 @@ License URI: LICENSE
 Text Domain: auservice
 Tags: Multipurpus, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
+@media (min-width: 1200px) {
+    .hero__text .hero-p {
+        padding: 0 28rem;
+    }
+}

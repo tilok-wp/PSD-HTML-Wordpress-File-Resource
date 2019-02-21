@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); global $au_service; ?>
+<html <?php language_attributes(); global $au_service; ?> >
   <head>
     <meta charset=" <?php bloginfo('charset'); ?> ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +57,8 @@
                   'container' => '',
                   'menu_class' => 'nav navbar-nav navbar-right'
 
-              ));  ?>
+              )); 
+               ?>
                -->
               <!-- <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>

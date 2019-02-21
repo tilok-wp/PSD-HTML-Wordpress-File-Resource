@@ -1,27 +1,39 @@
-<?php get_header(); ?>
+    <?php get_header(); $prefix = '_au_service_'; ?>
 
     <!-- Start hero Section -->
-    <div class="hero hero-image">
-      <div class="hero__text">
-        <div class="container">
-          <h2 class="hero-heading heading-primary">Free Diagnostics For Cars!</h2>
-          <p class="hero-p">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices  posuere cubilia <br> urae ellentesque habitant morbi tristique senectusv</p>
-          <button class="button-primary">Read more</button>
-        </div>
-      </div>
-      <div class="hero__cta">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-sm-6">
-              <div class="cta--text">You Have To Fix The Problem. Let’s Us Help You!</div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <button class="button-primary cta--button">Make an Appointment</button>
-            </div>
-          </div>
-        </div>  
-      </div>
-    </div>
+
+         <!-- <?php          
+                // $hero_image = get_post_meta( get_the_ID(), $prefix.'hero_image', true );                
+                // $hero_heading_text = get_post_meta( get_the_ID(), $prefix.'hero_heading_text', true );                
+                // $hero_content = get_post_meta( get_the_ID(), $prefix.'hero_content', true );                
+                // $hero_btn_text = get_post_meta( get_the_ID(), $prefix.'hero_button', true );                
+                // $cta__text = get_post_meta( get_the_ID(), $prefix.'hero_text_cta', true );                
+                // $cta_btn_text = get_post_meta( get_the_ID(), $prefix.'hero_text_cta_btn', true );                
+                ?> -->
+                <!-- Begin Single service item -->
+                <div class="hero" style = "background-image: url('<?php echo get_post_meta( get_the_ID(), $prefix.'hero_image', true ); ?>')" >
+                  <div class="hero__text">
+                    <div class="container">
+                      <h2 class="hero-heading heading-primary"><?php echo get_post_meta( get_the_ID(), $prefix.'hero_heading_text', true ); ?></h2>
+                      <p class="hero-p"><?php echo get_post_meta( get_the_ID(), $prefix.'hero_content', true ); ?></p>
+                      <button class="button-primary"><?php echo get_post_meta( get_the_ID(), $prefix.'hero_button', true ); ?></button>
+                    </div>
+                  </div>
+                  <div class="hero__cta">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                          <div class="cta--text"><?php echo get_post_meta( get_the_ID(), $prefix.'hero_text_cta', true ); ?></div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                          <button class="button-primary cta--button"><?php echo get_post_meta( get_the_ID(), $prefix.'hero_text_cta_btn', true ); ?></button>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- End Single service item -->
+
     <!-- End hero Section -->
 
    <!-- Start About Section -->
@@ -30,30 +42,27 @@
          <div class="row">
             <div class="col-md-6 col-sm-12">
                <div class="about__details">
-                  <h3 class="heading-secondary about__details-title">Welcome To Auservice</h3>
-                  <p class="p-text-1">In sed elit et diam eleifend accumsan. Vestibulum finibus condimentum eros, at auctor massa tincidunt sit amet. Nulla imperdiet commodo nisl in pretium. Quisque dolor sit amet est commodo, quis aliquet velit congue.</p>
-                  <p class="progress--title">Service Quality</p>
-                  <div class="progress">
-                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                        <div class="progress-status">90%</div>
-                     </div>
-                  </div>
-                  <p class="progress--title">Support quality</p>
-                  <div class="progress">
-                     <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
-                        <div class="progress-status">95%</div>
-                     </div>
-                  </div>
-                  <p class="progress--title">Long-Term Warranty</p>
-                  <div class="progress">
-                     <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-                        <div class="progress-status">85%</div>
-                     </div>
-                  </div>
+                  <h3 class="heading-secondary about__details-title"><?php echo get_post_meta( get_the_ID(), $prefix.'about_headding', true ); ?></h3>
+                  <p class="p-text-1"><?php echo get_post_meta( get_the_ID(), $prefix.'about_content', true ); ?></p>
+
+                  <?php  
+                  $entries = get_post_meta( get_the_ID(), $prefix . 'progress_sections', true );
+
+                  foreach($entries as $singlevalue) { ?>
+                  
+                  <p class="progress--title"><?php echo $singlevalue[$prefix . 'progress_title']; ?></p>
+                                <div class="progress">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $singlevalue[$prefix . 'progress_value']; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $singlevalue[$prefix . 'progress_value']; ?>%;">
+                                      <div class="progress-status"><?php echo $singlevalue[$prefix . 'progress_value']; ?>%</div>
+                                  </div>
+                                </div>
+                <?php } 
+                ?>
+
                </div>
             </div>
             <div class="col-md-6 col-sm-12">
-               <div class="about__image">
+               <div class="about__image" style = "background-image: url('<?php echo get_post_meta( get_the_ID(), $prefix.'about_image', true ); ?>')" >
                </div>
             </div>
          </div>
@@ -64,7 +73,7 @@
     <section class="service section-padding">
       <div class="container">
         <div class="service__heading section-heading text-center">
-          <h2 class="heading-secondary">Our Services</h2>
+          <h2 class="heading-secondary"><?php echo get_post_meta( get_the_ID(), $prefix.'sevice_headding', true ); ?></h2>
         </div>
         <div class="service__box">
           <div class="service--carousel owl-carousel">
@@ -113,7 +122,7 @@
       <div class="container">
         <div class="row">
           <div class="service__heading section-heading text-center">
-            <h2 class="heading-secondary">Gallery</h2>
+            <h2 class="heading-secondary"><?php echo get_post_meta( get_the_ID(), $prefix.'gallery_headding', true ); ?></h2>
           </div>
           <?php 
                 $auservice_post = null;
@@ -155,30 +164,23 @@
     <section class="counterup">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <div class="counter__box">
-              <h5 class="heading-primary">15+</h5>
-              <h3 class="heading-quaternary">Years Of Experience</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="counter__box">
-              <h5 class="heading-primary">400+</h5>
-              <h3 class="heading-quaternary">Project complete</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="counter__box">
-              <h5 class="heading-primary">1500+</h5>
-              <h3 class="heading-quaternary">Happy claients</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="counter__box">
-              <h5 class="heading-primary">10+</h5>
-              <h3 class="heading-quaternary">Award wining</h3>
-            </div>
-          </div>
+
+        <?php  
+                  $counter_store = get_post_meta( get_the_ID(), $prefix . 'counter', true );
+
+                  foreach(  $counter_store as $singlcounter) { ?>
+
+                  <div class="col-md-3 col-sm-6">
+                    <div class="counter__box">
+                      <h5 class="heading-primary"><?php echo $singlcounter[$prefix . 'Counter_title']; ?></h5>
+                      <h3 class="heading-quaternary"><?php echo $singlcounter[$prefix . 'Counter_value']; ?></h3>
+                    </div>
+                  </div>               
+              <?php } 
+                ?>
+
+
+
         </div>
       </div>
     </section>
@@ -187,7 +189,7 @@
     <section class="testimonial section-padding">
       <div class="container">
         <div class="service__heading section-heading text-center">
-          <h2 class="heading-secondary">What Our Client Say?</h2>
+          <h2 class="heading-secondary"><?php echo get_post_meta( get_the_ID(), $prefix.'testimonial_headding', true ); ?></h2>
         </div>
         <div class="testimonial__box owl-carousel">
         <?php 
@@ -230,7 +232,7 @@
     <section class="claient section-padding">
       <div class="container">
         <div class="service__heading section-heading text-center">
-          <h2 class="heading-secondary">Our Partner </h2>
+          <h2 class="heading-secondary"><?php echo get_post_meta( get_the_ID(), $prefix.'clainet_headding', true ); ?></h2>
         </div>
         <div class="claient__box owl-carousel">
         <?php 
