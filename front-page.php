@@ -166,17 +166,19 @@
         <div class="row">
 
         <?php  
-                  $counter_store = get_post_meta( get_the_ID(), $prefix . 'counter', true );
+                  $count_entries = get_post_meta( get_the_ID(), $prefix . 'progress_sections', true );
+                  print_r($count_entries);
 
-                  foreach(  $counter_store as $singlcounter) { ?>
+          
+                    ?>
 
-                  <div class="col-md-3 col-sm-6">
+                  <!-- <div class="col-md-3 col-sm-6">
                     <div class="counter__box">
                       <h5 class="heading-primary"><?php echo $singlcounter[$prefix . 'Counter_title']; ?></h5>
                       <h3 class="heading-quaternary"><?php echo $singlcounter[$prefix . 'Counter_value']; ?></h3>
                     </div>
-                  </div>               
-              <?php } 
+                  </div>                -->
+              <?php 
                 ?>
 
 

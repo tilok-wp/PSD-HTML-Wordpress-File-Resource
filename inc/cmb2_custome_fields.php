@@ -200,7 +200,6 @@ function au_service_cmb2 (){
 		'name'    => __( 'Progress Title', 'au_service' ),
 		'id'      => $prefix . 'progress_title',
 		'type'    => 'text',
-		'default' => 'Input details',
 	) );
 	
 
@@ -211,7 +210,6 @@ function au_service_cmb2 (){
 		'id'      => $prefix . 'progress_value',
 		'type'    => 'text',
 		'options' => array( 'text_rows' => 8, ),
-		'default' => 100,
 	) );
 	// End Repeat Able Group Field //
 
@@ -252,7 +250,7 @@ function au_service_cmb2 (){
 
 	// Start Counter Repeat Able Group Field //
 	$au_repeat_test = new_cmb2_box( array(
-		'id'            => $prefix . 'counter',
+		'id'            => $prefix . 'counter_up',
 		'title'         => __( 'Counter Section Progress Bar', 'au_service' ),
 		'object_types' => array( 'page' ), // post type
 		'show_on'      => array( 'key' => 'page', 'value' => '12' ),
@@ -261,39 +259,47 @@ function au_service_cmb2 (){
 		'show_names'    => true,
 	) );
 
+// Start Counter Repeat Able Group Field //
+$cmb_repeat_test = new_cmb2_box( array(
+	'id'            => $prefix . 'counter_up',
+	'title'         => __( 'Counter Section counter Bar', 'au_service' ),
+	'object_types' => array( 'page' ), // post type
+	'show_on'      => array( 'key' => 'page', 'value' => '12' ),
+	'context'       => 'normal',
+	'priority'      => 'high',
+	'show_names'    => true,
+) );
 
-	// Repeatable group
-	$group_repeat = $au_repeat_test->add_field( array(
-		'id'          => $prefix . 'counter_sections',
-		'type'        => 'group',
-		'options'     => array(
-			'group_title'   => __( 'Counter Item', 'au_service' ) . ' {#}', // {#} gets replaced by row number
-			'add_button'    => __( 'Add another Counter', 'au_service' ),
-			'remove_button' => __( 'Remove Counter', 'au_service' ),
-		),
-	) );
+
+// Repeatable group
+$group_repeat_test = $cmb_repeat_test->add_field( array(
+	'id'          => $prefix . 'counter_sections',
+	'type'        => 'group',
+	'options'     => array(
+		'group_title'   => __( 'counter Bar', 'au_service' ) . ' {#}', // {#} gets replaced by row number
+		'add_button'    => __( 'Add another counter bar', 'au_service' ),
+		'remove_button' => __( 'Remove counter bar', 'au_service' ),
+	),
+) );
 
 
-	//* Title
-	$au_repeat_test->add_group_field( $group_repeat, array(
-		'name'    => __( 'Counter Title', 'au_service' ),
-		'id'      => $prefix . 'Counter_title',
-		'type'    => 'text',
-		'default' => 'Years Of Experience',
-	) );
+//* Title
+$cmb_repeat_test->add_group_field( $group_repeat_test, array(
+	'name'    => __( 'counter Title', 'au_service' ),
+	'id'      => $prefix . 'counter_title',
+	'type'    => 'text',
+) );
+
+
+
+//* Textarea
+$cmb_repeat_test->add_group_field( $group_repeat_test, array(
+	'name'    => __( 'counter value', 'au_service' ),
+	'id'      => $prefix . 'counter_value',
+	'type'    => 'text',
+	'options' => array( 'text_rows' => 8, ),
+) );
+// End Repeat Able Group Field //
 	
-
-
-	//* Textarea
-	$au_repeat_test->add_group_field( $group_repeat, array(
-		'name'    => __( 'Counter value', 'au_service' ),
-		'id'      => $prefix . 'Counter_value',
-		'type'    => 'text',
-		'options' => array( 'text_rows' => 8, ),
-		'default' => 15,
-	) );
-	// End Repeat Able Group Field //
-
-
 }
 add_action('cmb2_admin_init','au_service_cmb2');
