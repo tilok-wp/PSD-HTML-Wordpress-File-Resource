@@ -176,7 +176,7 @@ function au_service_cmb2 (){
 		'id'            => $prefix . 'progress',
 		'title'         => __( 'About Section Progress Bar', 'au_service' ),
 		'object_types' => array( 'page' ), // post type
-		'show_on'      => array( 'key' => 'page', 'value' => '12' ),
+		'show_on'      => array( 'key' => 'id', 'value' => '12' ),
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true,
@@ -252,7 +252,7 @@ function au_service_cmb2 (){
 		'id'            => $prefix . 'counter_up',
 		'title'         => __( 'Counter Section Progress Bar', 'au_service' ),
 		'object_types' => array( 'page' ), // post type
-		'show_on'      => array( 'key' => 'page', 'value' => '12' ),
+		'show_on'      => array( 'key' => 'id', 'value' => '12' ),
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true,
@@ -285,6 +285,58 @@ function au_service_cmb2 (){
 		'options' => array( 'text_rows' => 8, ),
 		'default' => 15,
 	) );
+	// End Repeat Able Group Field //
+
+	// Start Contact page Repeat Able Group Field //
+	$au_repeat_test = new_cmb2_box( array(
+		'id'            => $prefix . 'office',
+		'title'         => __( 'Branch Office List', 'au_service' ),
+		'object_types' => array( 'page' ), // post type
+		'show_on'      => array( 'key' => 'id', 'value' => '20' ),
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true,
+	) );
+
+	// Repeatable group
+	$group_repeat = $au_repeat_test->add_field( array(
+		'id'          => $prefix . 'office_info',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Office List', 'au_service' ) . ' {#}', // {#} gets replaced by row number
+			'add_button'    => __( 'Add another Office', 'au_service' ),
+			'remove_button' => __( 'Remove Office', 'au_service' ),
+			
+		),
+	) );
+
+	//* Title
+	$au_repeat_test->add_group_field( $group_repeat, array(
+		'name'    => __( 'Office name', 'au_service' ),
+		'id'      => $prefix .'office_name',
+		'type'    => 'text',
+	) );
+
+	//* Textarea
+	$au_repeat_test->add_group_field( $group_repeat, array(
+		'name'    => __( 'Office Address', 'au_service' ),
+		'id'      => $prefix . 'office_address',
+		'type'    => 'text',
+		'options' => array( 'text_rows' => 8, ),
+	) );
+	$au_repeat_test->add_group_field( $group_repeat, array(
+		'name'    => __( 'Office Email', 'au_service' ),
+		'id'      => $prefix . 'office_email',
+		'type'    => 'text',
+		'options' => array( 'text_rows' => 8, ),
+	) );
+	$au_repeat_test->add_group_field( $group_repeat, array(
+		'name'    => __( 'Office Phone', 'au_service' ),
+		'id'      => $prefix . 'office_phone',
+		'type'    => 'text',
+		'options' => array( 'text_rows' => 8, ),
+	) );
+
 	// End Repeat Able Group Field //
 
 

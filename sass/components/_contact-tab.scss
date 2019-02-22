@@ -1,0 +1,130 @@
+.contact {
+    margin: 12rem 0;
+    
+    &__form {
+        padding: 5rem 3rem;
+        box-shadow: 0 0 1rem #ccc;
+        overflow: hidden;
+
+        .contact--heading {
+            font-weight: 600;
+            color: #232323;            
+        }
+
+        .group-form {
+            margin-top: 1.5rem;
+
+            .single-input {
+                padding: 2.5rem 1.5rem;
+                border: none;
+                box-shadow: none;
+                border-bottom: .1rem solid #eee;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:not(:last-child){
+                   margin-bottom: 1.5rem; 
+                }
+            }
+
+            .send-icon {
+                margin-left: 1rem;
+            }
+        }
+        @include respond(tab) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__office {
+
+        &-name{
+            display: flex;   
+            
+            li {
+                flex: 1;
+                text-align: center;
+                
+                &:not(:last-child){
+                    margin-right: 2rem;
+                }
+                
+                a {
+                    border: .1rem solid #eee;
+                    color: $color-primary;
+                    transition: .5s;                    
+                }
+
+                &.active a,
+                &.active a:focus,
+                &.active:hover a {
+                    background: $color-primary;
+                    color: #fff;
+                }
+  
+            }
+        }
+
+        .tab-content {
+
+            .office-image {
+                width: 100%;
+                margin: 1.5rem 0;
+            }
+
+            .office--text {
+                display: flex;
+                align-items: center;
+                
+                &:not(:last-child){
+                    margin-bottom: 1.5rem;
+                }
+
+                .icon--box {
+                    margin-right: 1.8rem;
+                    background: transparent;
+                    height: 7rem;
+                    width: 7rem;
+                    border: .2rem solid #eee;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color-primary;
+                    font-size: 2.2rem;
+
+                    .fs-change {
+                        font-size: 3rem;
+                    }
+                }
+                .text--box {
+
+                    .text--title {
+
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        color: #232323;
+                    }
+
+                    .detail-text {
+                        margin-top: .5rem;
+                        color:#232323;
+                    }
+
+                    a {
+                        color: #232323;;
+                        transition: .3s;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: none;
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

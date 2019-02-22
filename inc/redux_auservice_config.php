@@ -327,46 +327,7 @@
         'desc'       => 'This field use for header elements',
         'icon'       => 'el el-bag'
     ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'      => ( 'Footer Coloum -1'),
-        'id'         => 'footer_col-1',
-        'subsection' => true,
-        'fields'     => array (
-
-            array(
-                'id'    => 'footer_logo_sub',
-                'desc'  =>  'Upload footer logo',
-                'type'  => 'media',
-                'default' => array (
-                    'url'   => get_template_directory_uri ().'/assets/images/logo-2.png',
-                )
-                ),
-
-            array(
-                'id'    => 'footer_logo_text',
-                'desc'  =>  'Write footer text',
-                'type'  => 'editor',
-                'default' => 'Pellentesque sit amet interdum tortor purus, quis blandit purus placerat ac. Integer ac scelerisque odio molestie tellus. Duis consequat laoreet diam, efficitur amet iaculis turpis.'
-                ),
-
-            array(
-                'id'    => 'footer_logo_social',
-                'desc'  =>  'Add footer icofont icon',
-                'type'  => 'slides',
-                'placeholder' => array (
-                    'title' => 'Write icofont class name',
-                    'url'  => 'Input url as given class link',
-                )
-                ),
-            )
-    )
- );
-
-
-
-
-
+    
     Redux::setSection( $opt_name, array(
         'title'      => ( 'Copywright options'),
         'id'         => 'footer_sub',
@@ -380,20 +341,7 @@
             ),
         )
     ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'      => ( 'Copywright options'),
-        'id'         => 'footer_sub',
-        'subsection' => true,
-        'fields'     => array (
-            array(
-                'id'    => 'copywrigt_text',
-                'desc'  =>  'Input Copy Wright Text',
-                'type'  =>  'editor',
-                'default' => '© 2019 Copyright AuTheme. All right reserved.'
-            ),
-        )
-    ) );
+   
 
     /*
      * <--- END SECTIONS

@@ -16,11 +16,11 @@
       $entries = get_post_meta( get_the_ID(), $prefix . 'progress_sections', true );
       $about_image = get_post_meta( get_the_ID(), $prefix . 'about_image', true );
       //End About Section Variable     
-      $sevice_headding = get_post_meta( get_the_ID(), $prefix.'sevice_headding', true ); //Start Service Section Variable
-      $gallery_headding = get_post_meta( get_the_ID(), $prefix.'gallery_headding', true );//Start Gallery Section Variabl 
-      $counter_sections = get_post_meta( get_the_ID(), $prefix.'counter_sections', true );//Start CounterUP Section Variable
-      $testimonial_headding = get_post_meta( get_the_ID(), $prefix.'testimonial_headding', true );//Start testimonial Section Variable
-      $clainet_headding = get_post_meta( get_the_ID(), $prefix.'clainet_headding', true );//Start clainet Section Variable
+      $sevice_headding = get_post_meta( get_the_ID(), $prefix.'sevice_headding', true ); //Service Section Variable
+      $gallery_headding = get_post_meta( get_the_ID(), $prefix.'gallery_headding', true );//Gallery Section Variabl 
+      $counter_sections = get_post_meta( get_the_ID(), $prefix.'counter_sections', true );//CounterUP Section Variable
+      $testimonial_headding = get_post_meta( get_the_ID(), $prefix.'testimonial_headding', true );//testimonial Section Variable
+      $clainet_headding = get_post_meta( get_the_ID(), $prefix.'clainet_headding', true );//clainet Section Variable
     ?>
 
     

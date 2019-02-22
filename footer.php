@@ -10,7 +10,7 @@
         </div>
         <div class="footer__buttom text-center">
         <div class="container">
-        <small> &copy; 2019 Copyright <b>AuTheme. </b> All right reserved. </small>
+        <small> <?php global $au_service; echo  $au_service['copywrigt_text']?> </small>
         </div>
         </div> 
     </footer>
