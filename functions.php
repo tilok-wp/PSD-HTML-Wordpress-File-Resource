@@ -7,8 +7,8 @@ function auseervice_theme_init(){
     add_image_size('client-thum',175, 50, true);
 
     register_nav_menus(array(
-		'primary_menu' => 'Primary Menu',
-		'footer_menu' => 'Footer Menu',
+        'main_menu' => 'Main Menu',
+        'other_menu' => 'Other Menu'
     ));
 
 }

@@ -51,15 +51,15 @@
         
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <!-- <?php wp_nav_menu(array(
-                  'theme_loaction' => 'primary_menu',
+              <?php wp_nav_menu(array(
+                  'theme_loaction' => 'main_menu',
                   'fallback_cb' => 'autheme_falback_menu',
                   'container' => '',
                   'menu_class' => 'nav navbar-nav navbar-right'
 
               )); 
                ?>
-               -->
+              
               <!-- <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                   <li class="dropdown">
