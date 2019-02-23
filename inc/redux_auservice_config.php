@@ -211,90 +211,64 @@
             'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework-demo' )
         )
     );
-    Redux::setHelpTab( $opt_name, $tabs );
-
-    // Set the help sidebar
-    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'redux-framework-demo' );
-    Redux::setHelpSidebar( $opt_name, $content );
 
 
-    /*
-     * <--- END HELP TABS
-     */
+/*************************************************
+Start  AU-Theme Options
+***************************************************/
 
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Section Active / Inactive / Shorter Options'),
+        'id'         => 'page_shorter_option',
+        'desc'       => 'This field use Section Active / Inactive / Shorter Setting',
+        'icon'       => 'el el-view-mode'
+    ) );
 
-    /*
-     *
-     * ---> START SECTIONS
-     *
-     */
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Header Follow'),
+        'id'         => 'section_sort__a',
+        'subsection' => true,
+        'fields'     => array (
+            array(
+                'id'    => 'section_sorter_opt',
+                'desc'  =>  'Section Sort',
+                'type'  =>  'sorter',
+                'options' => array(
+                    'Active' => array(
+                        'hero' => 'Hero Section',
+                        'about' => 'About Section',
+                        'service' => 'Service Section',
+                        'counterup' => 'Counter Section',
+                        'gallery' => 'Gallery Section',
+                        'claient' => 'Claient Section',
+                        'testimontal' => 'Testimontal Section',
+                    ),
+                    'Deactive' =>array(
 
-    /*
-
-        As of Redux 3.5+, there is an extensive API. This API can be used in a mix/match mode allowing for
-
-
-     */
-
-    // -> START Basic Fields
+                    ),
+                )       
+            )
+        )
+    ) );
     // Redux::setSection( $opt_name, array(
-    //     'title'  => __( 'Basic Field', 'redux-framework-demo' ),
-    //     'id'     => 'basic',
-    //     'desc'   => __( 'Basic field with no subsections.', 'redux-framework-demo' ),
-    //     'icon'   => 'el el-home',
-    //     'fields' => array(
+    //     'title'      => ( 'Section Setting'),
+    //     'id'         => 'section_setting',
+    //     'subsection' => true,
+    //     'fields'     => array (
     //         array(
-    //             'id'       => 'opt-text',
-    //             'type'     => 'text',
-    //             'title'    => __( 'Example Text', 'redux-framework-demo' ),
-    //             'desc'     => __( 'Example description.', 'redux-framework-demo' ),
-    //             'subtitle' => __( 'Example subtitle.', 'redux-framework-demo' ),
-    //             'hint'     => array(
-    //                 'content' => 'This is a <b>hint</b> tool-tip for the text field.<br/><br/>Add any HTML based text you like here.',
+    //             'id'    => 'section_setting_opt',
+    //             'desc'  =>  'Header massage text',
+    //             'type'  => 'sorter',
+    //             'options' => array(
+    //                 'Active' => array(
+    //                     'hero_section' => 'Hero Section',
+    //                 ),
+
+    //                 'Deactive' => array(
+    //                    'name' => 'Nmae' 
+    //                 )
     //             )
     //         )
-    //     )
-    // ) );
-
-    // Redux::setSection( $opt_name, array(
-    //     'title' => __( 'Basic Fields', 'redux-framework-demo' ),
-    //     'id'    => 'basic',
-    //     'desc'  => __( 'Basic fields as subsections.', 'redux-framework-demo' ),
-    //     'icon'  => 'el el-home'
-    // ) );
-
-    // Redux::setSection( $opt_name, array(
-    //     'title'      => __( 'Text', 'redux-framework-demo' ),
-    //     'desc'       => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="//docs.reduxframework.com/core/fields/text/" target="_blank">//docs.reduxframework.com/core/fields/text/</a>',
-    //     'id'         => 'opt-text-subsection',
-    //     'subsection' => true,
-    //     'fields'     => array(
-    //         array(
-    //             'id'       => 'text-example',
-    //             'type'     => 'text',
-    //             'title'    => __( 'Text Field', 'redux-framework-demo' ),
-    //             'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
-    //             'desc'     => __( 'Field Description', 'redux-framework-demo' ),
-    //             'default'  => 'Default Text',
-    //         ),
-    //     )
-    // ) );
-
-    // Redux::setSection( $opt_name, array(
-    //     'title'      => __( 'Text Area', 'redux-framework-demo' ),
-    //     'desc'       => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="//docs.reduxframework.com/core/fields/textarea/" target="_blank">//docs.reduxframework.com/core/fields/textarea/</a>',
-    //     'id'         => 'opt-textarea-subsection',
-    //     'subsection' => true,
-    //     'fields'     => array(
-    //         array(
-    //             'id'       => 'textarea-example',
-    //             'type'     => 'textarea',
-    //             'title'    => __( 'Text Area Field', 'redux-framework-demo' ),
-    //             'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
-    //             'desc'     => __( 'Field Description', 'redux-framework-demo' ),
-    //             'default'  => 'Default Text',
-    //         ),
-    //     )
     // ) );
 
     Redux::setSection( $opt_name, array(

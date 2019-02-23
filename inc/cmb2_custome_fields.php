@@ -316,6 +316,11 @@ function au_service_cmb2 (){
 		'id'      => $prefix .'office_name',
 		'type'    => 'text',
 	) );
+	$au_repeat_test->add_group_field( $group_repeat, array(
+		'name'    => __( 'Office photo', 'au_service' ),
+		'id'      => $prefix .'office_photo',
+		'type'    => 'file',
+	) );
 
 	//* Textarea
 	$au_repeat_test->add_group_field( $group_repeat, array(

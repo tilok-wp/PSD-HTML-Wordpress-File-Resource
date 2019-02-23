@@ -38,8 +38,9 @@ Template Name: For Contact Page
                                 $i = 0;
                                 foreach($office_inf as $single_office) { $i++ ?>
                                 <div class="tab-pane fade in <?php if($i <= 1 ){ echo 'active';} ?>" id="office-<?php echo $i; ?>">
-                                    <div class="office-information">            
-                                        <img src="assets/images/office-1.jpg" alt="" class="office-image">
+                                    <div class="office-information"> 
+                                           
+                                        <img src="<?php  echo $single_office[$prefix .'office_photo']; ?>" alt="" class="office-image">
                                         <?php
                                         if($single_office[$prefix .'office_address'] != '') { ?>
                                             <div class="office--text">
