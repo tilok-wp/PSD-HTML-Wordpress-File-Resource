@@ -305,6 +305,52 @@
     ) );
 
     Redux::setSection( $opt_name, array(
+        'title'      => ( 'Header Top Massage'),
+        'id'         => 'header_top',
+        'subsection' => true,
+        'fields'     => array (
+            array(
+                'id'    => 'header_top_text',
+                'desc'  =>  'Header massage text',
+                'url'   => true,
+                'type'  =>  'text',
+                'default' => 'Best services quality for customers.'          
+            )
+        )
+    ) );
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Header Follow'),
+        'id'         => 'header_follow',
+        'subsection' => true,
+        'fields'     => array (
+            array(
+                'id'    => 'header_follow_text',
+                'desc'  =>  'Header follow text',
+                'url'   => true,
+                'type'  =>  'text',
+                'default' => 'Follow Us :'          
+            )
+        )
+    ) );
+    Redux::setSection( $opt_name, array(
+        'title'      => ( 'Header Top Social'),
+        'id'         => 'header_top_socaial',
+        'subsection' => true,
+        'fields'     => array (
+            array(
+                'id'    => 'header_top_social',
+                'desc'  =>  'Social Input',
+                'url'   => true,
+                'type'  => 'slides',
+                'placeholder' => array (
+                    'title' => 'Input Icon Class Name',
+                    'url'   => 'Input Social URL here',
+                    'description'  => 'No need input anything ',
+                )
+            )
+        )
+    ) );
+    Redux::setSection( $opt_name, array(
         'title'      => ( 'Logo options'),
         'id'         => 'header_sub',
         'subsection' => true,

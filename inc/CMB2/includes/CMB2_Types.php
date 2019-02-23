@@ -528,6 +528,12 @@ class CMB2_Types {
 			'type'  => 'email',
 		), 'input' )->render();
 	}
+	public function text_number() {
+		return $this->get_new_render_type( __FUNCTION__, 'CMB2_Type_Text', array(
+			'class' => 'cmb2-text-email cmb2-text-medium',
+			'type'  => 'number',
+		), 'input' )->render();
+	}
 
 	public function text_url() {
 		return $this->get_new_render_type( __FUNCTION__, 'CMB2_Type_Text', array(

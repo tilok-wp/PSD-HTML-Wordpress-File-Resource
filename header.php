@@ -18,15 +18,21 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
-              <div class="top--massage">Best services quality for customers.</div>
+              <div class="top--massage"><?php echo $au_service['header_top_text']?></div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
               <ul class="social-link">
-                <li class="link-title">Follow Us: </li>
-                <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                <li><a href="#"><i class="icofont-behance"></i></a></li>
+                <li class="link-title"><?php echo $au_service['header_follow']?> </li>
+                <?php 
+
+                    foreach($au_service['header_top_social'] as $single_social){ 
+                      if($single_social['title'] != ''){ ?>
+
+                    <li><a href="<?php print_r($single_social['url']); ?>"><i class="<?php echo $single_social['title']; ?>"></i></a></li>
+                                  
+                   <?php }
+                  }
+                ?>
               </ul>
             </div>
           </div>

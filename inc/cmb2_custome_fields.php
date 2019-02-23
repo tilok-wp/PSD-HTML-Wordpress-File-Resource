@@ -327,13 +327,13 @@ function au_service_cmb2 (){
 	$au_repeat_test->add_group_field( $group_repeat, array(
 		'name'    => __( 'Office Email', 'au_service' ),
 		'id'      => $prefix . 'office_email',
-		'type'    => 'text',
+		'type'    => 'text_email',
 		'options' => array( 'text_rows' => 8, ),
 	) );
 	$au_repeat_test->add_group_field( $group_repeat, array(
 		'name'    => __( 'Office Phone', 'au_service' ),
 		'id'      => $prefix . 'office_phone',
-		'type'    => 'text',
+		'type'    => 'text_number',
 		'options' => array( 'text_rows' => 8, ),
 	) );
 

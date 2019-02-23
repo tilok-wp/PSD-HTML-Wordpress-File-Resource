@@ -8,13 +8,12 @@
 
         .contact--heading {
             font-weight: 600;
-            color: #232323;            
+            color: #232323;
+            margin-bottom: 2.5rem;           
         }
 
-        .group-form {
-            margin-top: 1.5rem;
 
-            .single-input {
+         input.single-input {
                 padding: 2.5rem 1.5rem;
                 border: none;
                 box-shadow: none;
@@ -32,11 +31,37 @@
             .send-icon {
                 margin-left: 1rem;
             }
-        }
+
         @include respond(tab) {
             margin-bottom: 3rem;
         }
     }
+
+    textarea.single-input {
+        height: 10rem;
+        padding: 2.5rem 1.5rem;
+        border: none;
+        box-shadow: none;
+        border-bottom: .1rem solid #eee;
+    }
+    textarea.single-input:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    input.button-primary {
+        border: none;
+        background: #2C53D2;
+        color: #fff;
+        padding: .8rem 1.5rem;
+        border-radius: .3rem;
+        transition: .3s;
+    }
+    input.button-primary:hover {
+        transform: translateY(-0.2rem);
+        }
+
+    
 
     &__office {
 
