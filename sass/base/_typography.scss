@@ -22,6 +22,10 @@ a,
 button {
     transition: .3s;
     font-weight: 400;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
 }
 
 button {

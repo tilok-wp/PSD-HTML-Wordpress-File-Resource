@@ -4,12 +4,17 @@ Template Name: Feature Page
 */
     get_header(); ?>
             
-    <section class="gallery section-padding">
+    <section class="gallery section-padding page-padding">
       <div class="container">
         <div class="row">
+        <?php 
+          if($gallery_headding != ''){ ?>
           <div class="service__heading section-heading text-center">
             <h2 class="heading-secondary"><?php echo $gallery_headding; ?></h2>
           </div>
+          <?php }
+        ?>
+
           <?php 
                 $auservice_post = null;
                 $auservice_post = new WP_Query(array(

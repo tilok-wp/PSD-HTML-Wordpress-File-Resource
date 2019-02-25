@@ -17,7 +17,7 @@
                     <h3 class="heading-secondary about__details-title"><?php echo $about_headding; ?></h3>
                     <p class="p-text-1"><?php echo $about_content; ?></p>
                     <?php 
-                    foreach($entries as $singlevalue) { ?>                    
+                    foreach($entries as $singlevalue) { ?>
                       <p class="progress--title"><?php echo $singlevalue[$prefix . 'progress_title']; ?></p>
                       <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $singlevalue[$prefix . 'progress_value']; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $singlevalue[$prefix . 'progress_value']; ?>%;">

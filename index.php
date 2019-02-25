@@ -1,28 +1,50 @@
 <?php get_header(); ?>
     <!-- Start hero Section -->
-    
-    <div class="hero" style = "background-image: url('<?php the_post_thumbnail_url(); ?>')">
- 
-      <div class="hero__text">
+      <section class="blog section-padding page-padding">
         <div class="container">
-          <h2 class="hero-heading heading-primary">Free Diagnostics For Cars!</h2>
-          <p class="hero-p">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices  posuere cubilia <br> urae ellentesque habitant morbi tristique senectusv</p>
-          <button class="button-primary">Read more</button>
-        </div>
-      </div>
-      <div class="hero__cta">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-sm-6">
-              <div class="cta--text">You Have To Fix The Problem. Let’s Us Help You!</div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <button class="button-primary cta--button">Make an Appointment</button>
-            </div>
+          <div class="row"> 
+          <?php 
+
+
+                if( have_posts() ){
+                    while( have_posts() ){
+                       the_post(); 
+                       
+                        ?>
+              <div class="col-md-4 col-sm-4">
+                  <div class="blog__single">
+                    <div class="blog__single-image">
+                      <img src="<?php the_post_thumbnail_url('post-thum'); ?>" alt="" class="image-thumb">
+                    </div>
+                    <div class="blog__single-details">
+                      <div class="blog__author">
+                        <div class="author--image"></div>
+                        <a href="<?php echo the_permalink(); ?>"><h3 class=".heading-quaternary author--name"><?php echo the_title(); ?></h3></a>
+                        <span class="published--date">25th dec 2018 </span>
+                      </div>
+                      <div class="blog__text">
+                        <p class="content-text"><?php echo the_excerpt(); ?></p>
+                        <a href="<?php echo the_permalink(); ?>" class="button-primary"> Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                           
+                    <?php }
+
+                    }else{
+                        echo 'No post';
+                    }
+                    wp_reset_postdata();
+                ?>
+
+
+              </div>
           </div>
-        </div>  
-      </div>
-    </div>
-    <!-- End hero Section -->
+        </div>
+      </section>
+
+
+
 
 <?php get_footer(); ?>
