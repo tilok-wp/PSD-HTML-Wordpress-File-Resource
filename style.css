@@ -71,3 +71,8 @@ a.tag-cloud-link:hover {
     color: #2c53d2;
 }
 
+.blog__text p a {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}

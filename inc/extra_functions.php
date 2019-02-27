@@ -30,4 +30,19 @@ function autheme_falback_menu (){ ?>
         <li class=""><a href="#">Contact</a></li>
         <li><a href="#"><i class="icofont-ui-search"></i></a></li>
     </ul>
-<?php }
+<?php 
+}
+
+function cExcerpt($number=15, $readmore='Read More'){
+    $newnumber = $number + 1;
+    $var = explode(' ', strip_tags( get_the_content() ), $newnumber );
+    
+    if( count($var) >= $newnumber ){
+        array_pop($var);  
+    }
+    
+    array_push($var, '<a href="'.get_the_permalink().'" class="button-primary">'.$readmore.'</a>');
+    $var = implode(' ', $var);
+    
+    return $var;
+}

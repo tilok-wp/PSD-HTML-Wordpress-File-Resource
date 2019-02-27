@@ -57,5 +57,36 @@
                 'title','revisions','thumbnail','custom-fields','page-attributes'
             )
         ));
+
+        register_taxonomy(
+            'gallery_cat',
+            'galerrys',
+            array(
+                // 'label' => 'Gallery Category'
+                'labels' => array(
+                    'name' => 'Galerry Category ',
+                    'add_new_item' => 'Add Galerry Item Category ',
+
+                ),
+                'hierarchical' => true,
+                'show_admin_column' => true,
+            )
+        );
+
+        register_taxonomy(
+            'gallery_tag',
+            'galerrys',
+            array(
+                // 'label' => 'Gallery Category'
+                'labels' => array(
+                    'name' => 'Galerry Tag ',
+                    'add_new_item' => 'Add Galerry Item Tag ',
+
+                ),
+                'hierarchical' => false,
+                'show_admin_column' => true,
+            )
+        );
     }
     add_action('init','auservice_custom_post');
+    

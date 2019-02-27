@@ -23,8 +23,7 @@
                         <span class="published--date">25th dec 2018 </span>
                       </div>
                       <div class="blog__text">
-                        <p class="content-text"><?php echo the_excerpt(); ?></p>
-                        <a href="<?php echo the_permalink(); ?>" class="button-primary"> Read More</a>
+                        <p class="content-text"><?php echo cExcerpt(10, 'Learn More'); ?></p>
                       </div>
                     </div>
                   </div>

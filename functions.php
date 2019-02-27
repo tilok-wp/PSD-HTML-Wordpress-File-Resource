@@ -7,3 +7,4 @@
     include_once('inc/cmb2_custome_fields.php');
     require_once('inc/redux-framework-master/redux-framework.php');
     require_once('inc/redux_auservice_config.php');
+    require_once('inc/plugin_auto_activation.php');

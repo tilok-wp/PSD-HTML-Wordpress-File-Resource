@@ -20,7 +20,9 @@ Template Name: Feature Page
                 $auservice_post = new WP_Query(array(
                     'post_type' => 'galerrys',
                     'posts_per_page'=> -1,                    
-                    'order' => 'ASC'
+                    'order' => 'ASC',
+                    'gallery_cat' => 'development, design, marketing',  // Category option
+                    // 'gallery_tag' => 'socail + programming'  // Tag option 2 matching
                 ));
 
                 if( $auservice_post->have_posts() ){
